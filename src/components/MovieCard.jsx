@@ -9,7 +9,6 @@ const MovieCard = ({id, poster_path, title, vote_average, overview}) => {
   const navigate = useNavigate()
 
   const {currentUser} = useContext(AuthorContext)
-  // const IMG_API = "";
   
   return (
     <div className="movie"

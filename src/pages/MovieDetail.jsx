@@ -29,13 +29,13 @@ const MovieDetail = () => {
       </div>     
       
       <div className="flex flex-col items-center justify-center gap-y-32 shadow-xl">
-        <div>
+        {/* <div>
           <video 
           // tabIndex="-1"
           className="video-stream html5-main-video"
           playsInline
           src={VIDEO_URL} title="YouTubeVideo" allowFullScreen></video>
-        </div>
+        </div> */}
         <div className="flex flex-col md:flex-row max-w-6xl rounded-lg bg-gray-100 shadow-lg">            
           <img
             className=" lg:w-1/3 h-96 lg:h-[600px] object-cover rounded-t-lg md:rounded-none md:rounded-l-lg"

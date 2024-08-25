@@ -23,7 +23,7 @@ const Main = () => {
     >
       <form onSubmit={handleSubmit} className="flex justify-center p-2">
         <input onChange={(e)=>setQuery(e.target.value)} type="search" placeholder="Search for a movie..." id="search"
-          className="text-gray-900 m-3 p-2 rounded-lg w-80 "
+          className="text-gray-300 m-3 p-2 rounded-lg w-80 "
         />
         <button type="submit" className="btn-danger-bordered active:scale-90">Search</button>
       </form>
