@@ -29,17 +29,13 @@ const MovieDetail = () => {
       </div>     
       
       <div className="flex flex-col items-center justify-center gap-y-32 shadow-xl">
-        {/* <div>
-          <video 
-          // tabIndex="-1"
-          className="video-stream html5-main-video"
-          playsInline
-          src={VIDEO_URL} title="YouTubeVideo" allowFullScreen></video>
-        </div> */}
+
+        <iframe width="652" height="367" src="https://www.youtube.com/embed/CVpUuw9XSjY" title="Redux For Beginners | React Redux Tutorial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        
         <div className="flex flex-col md:flex-row max-w-6xl rounded-lg bg-gray-100 shadow-lg">            
           <img
             className=" lg:w-1/3 h-96 lg:h-[600px] object-cover rounded-t-lg md:rounded-none md:rounded-l-lg"
-            src={poster_path ? IMG_URL + poster_path : Image} alt="poster"             
+            src={poster_path ? IMG_URL + poster_path : Image} alt="poster"
           />           
           <div className="p-4 m-5 flex flex-col justify-between">
             <div>
