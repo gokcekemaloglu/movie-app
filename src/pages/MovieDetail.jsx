@@ -9,8 +9,10 @@ const MovieDetail = () => {
   const {id} = useParams()
   
   const [filmDetail, setFilmDetail] = useState("")
+  const [video, setVideo] = useState("")
   
   const {title, overview, poster_path, vote_average, vote_count, release_date} = filmDetail
+  
 
   const DETAIL_URL = `https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}`
   const VIDEO_URL = `https://api.themoviedb.org/3/movie/${id}/videos?api_key=${API_KEY}`
@@ -21,6 +23,13 @@ const MovieDetail = () => {
   useEffect(()=>{
     axios.get(DETAIL_URL).then((res)=> setFilmDetail(res.data))
   },[DETAIL_URL])
+
+  useEffect(()=>{
+    axios.get(VIDEO_URL).then((res)=> {
+      const videoKey = res.data.results[0]?.key; // İlk videonun key'ini alıyoruz
+      setVideo(videoKey);
+    })
+  },[VIDEO_URL])
   
   return (
     <div className="flex flex-col items-center justify-center container px-10 mx-auto py-10 shadow-xl">
@@ -30,7 +39,7 @@ const MovieDetail = () => {
       
       <div className="flex flex-col items-center justify-center gap-y-32 shadow-xl">
 
-        <iframe width="652" height="367" src="https://www.youtube.com/embed/CVpUuw9XSjY" title="Redux For Beginners | React Redux Tutorial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="652" height="367" src={`https://www.youtube.com/embed/${video}`} title="Redux For Beginners | React Redux Tutorial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe> 
         
         <div className="flex flex-col md:flex-row max-w-6xl rounded-lg bg-gray-100 shadow-lg">            
           <img
