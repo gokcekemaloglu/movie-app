@@ -1,6 +1,6 @@
 # Movie_App
 
-https://cine-wave-movie-app.vercel.app/
+https://movie-app-gokce.vercel.app/
 
 ## 🎯 Project Purpose
 
