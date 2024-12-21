@@ -47,7 +47,8 @@ CineWave’s user authentication and navigation workflow ensures a seamless and 
   
 ## Outcome
 
-![CineWave Movie App](https://github.com/user-attachments/assets/f5b2d64b-5083-440d-8003-ec2fb261e8f1)
+![Movie App](![MovieApp](https://github.com/user-attachments/assets/e3999fa1-fca5-42f4-a9d6-db2f77c95991)
+
 
 ## Project Structure
 
